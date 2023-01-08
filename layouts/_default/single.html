@@ -2,22 +2,22 @@
   <div class="wrap mt post">
     <div>
       {{- $date := (dateFormat "02. January 2006" .Date) -}}
-      <p class="post_date">{{ $date }}</p>
       <h1 class="post_title">{{ .Title }}</h1>
       <div class="post_body">
         <div class="post_inner">
-        {{ with .Params.image }}
+          {{ with .Params.image }}
           {{- $image := absURL (printf "images/%s" .) }}
           {{ if in . "https://" }}
-            {{- $image = . }}
+          {{- $image = . }}
           {{ end }}
           <img src="{{ $image }}" alt="{{ . }}" class="post_thumbnail">
-        {{ end }}
+          {{ end }}
           {{ .Content }}
         </div>
         <div class="post_extra mb-2">
           {{ partialCached "share" . }}
         </div>
+        <p class="post_date">{{ $date }}</p>
         <div>
         {{ template "_internal/disqus.html" . }}
         </div>
