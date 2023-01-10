@@ -2,7 +2,8 @@
   <div class="wrap mt post">
     <div>
       {{- $date := (dateFormat "02. January 2006" .Date) -}}
-      <h1 class="post_title">{{ .Title }}</h1>
+      <h1 class="post_title" style="margin-top: 0px;
+      ">{{ .Title }}</h1>
       <div class="post_body">
         <div class="post_inner">
           {{ with .Params.image }}
