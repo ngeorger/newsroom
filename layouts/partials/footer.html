@@ -1,5 +1,11 @@
 <footer class="footer wrap pale">
-  <p>&copy;&nbsp;<span class="year"></span>&nbsp;{{ .Site.Title }}</p>
+  <p>
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer">
+      <img width="120" alt="CC-BY-SA icon white"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/CC-BY-SA_icon_white.svg/64px-CC-BY-SA_icon_white.svg.png">
+    </a>
+
+    <span class="year"></span>&nbsp;{{ .Site.Title }}</p>
   <p class="attribution upcase">{{ safeHTML (T "designed_by" .Site.Data.designer) }}</p>
 </footer>
 {{ $scriptPath := "js/index.js" }}

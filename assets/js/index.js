@@ -318,7 +318,7 @@
     }
   })();
 
-  const light = 'lit';
+  const light = 'dim';
   const dark = 'dim';
   const storageKey = 'colorMode';
   const key = '--color-mode';

@@ -1,7 +1,7 @@
 {{ define "main" }}
   <div class="wrap mt post">
     <div>
-      {{- $date := (dateFormat "02. January 2006" .Date) -}}
+      {{- $date := (dateFormat "02 January 2006" .Date) -}}
       <h1 class="post_title" style="margin-top: 0px;
       ">{{ .Title }}</h1>
       <div class="post_body">
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <a href="{{ $.Site.BaseURL }}" class="post_nav"><span class="post_next">Recientes 
+    <a href="{{ $.Site.BaseURL }}/noticias/" class="post_nav"><span class="post_next">Recientes 
       <svg class="icon icon_scale">
         <use xlink:href="#double-arrow"></use>
       </svg>

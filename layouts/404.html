@@ -1,7 +1,9 @@
 {{ define "main" }}
-<div class="never wrap">
-  <h1 class="never_title">Ups! Error 404!</h1>
-  <p class="pale">El 404 significa que no encontramos la URL. ALgo así como cuando Drácula se mira al espejo.</p>
-  <div class="btn btn_back upcase">Vuelve de donde venías</div>
+<div class="never wrap m1">
+  <h1>Ups! Error 404!</h1>
+  <p>El 404 significa que no encontramos la URL.</p>
+  <i>Algo así como cuando Drácula se mira al espejo.</i><br />
+  <br />
+  <a href="{{ $.Site.BaseURL }}" class="uppercase" target="_self" rel="" style="font-size:larger; color: white;">Volver al inicio</a>
 </div>
 {{ end }}

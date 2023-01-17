@@ -1,6 +1,13 @@
 {{- $params := site.Params }}
 {{- $pl := .Permalink }}
 {{ $st := site.Title }}
+{{- $description := "" }}
+{{- with .Description }}
+  {{-  $description = . }}
+{{- else  }}
+  {{- $description = $params.description }}
+{{- end }}
+{{- $description = truncate 160 "" $description }}
 {{- $summary := "" }}
 {{- with .Summary }}
   {{-  $summary = . }}
@@ -26,7 +33,7 @@
 <meta property="og:locale" content='{{ default "en_US" $params.locale }}'>
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ $summary }}">
+<meta property="og:description" content="{{ $description }}">
 <meta property="og:url" content="{{ $pl }}">
 <meta property="og:image" content="{{ $image }}">
 {{- if eq .Section "blog" -}}
@@ -64,7 +71,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="{{ $params.twitter }}">
   <meta name="twitter:title" content="{{ .Title }}">
-  <meta name="twitter:description" content="{{ $summary }}">
+  <meta name="twitter:description" content="{{ $description }}">
   <meta name="twitter:image" content="{{ $image }}">
 {{- end }}
 <link rel="canonical" href="{{ $pl }}">
