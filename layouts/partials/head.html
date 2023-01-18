@@ -4,9 +4,11 @@
   {{- with .Site.Params.ga_verify }}
   <meta name="google-site-verification" content="{{ . }}" />
   {{- end }}
-  <meta name="viewport" content ="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  {{- with .Site.Params.description }}
+  <meta name="description" content="{{ . }}" />
+  {{- end }}
+  <meta name="viewport" content ="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  {{ partial "lazyimg-setup-nojs" }}
   {{- partialCached "analytics" . }}
   {{- partial "opengraph" . }}
   {{- partialCached "favicon" . }}
