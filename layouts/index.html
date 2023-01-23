@@ -8,7 +8,7 @@
     {{ if isset .Params "image" }}
       {{ $scratch.Set "image" .Params.image }}
     {{ else }}
-      {{ $scratch.Set "image" "thumbnail.svg" }}
+      {{ $scratch.Set "image" "logo.svg" }}
     {{ end }}
     {{ $image := $scratch.Get "image" }}
     {{ $bg := (absURL (printf "images/%s" $image)) }}
@@ -31,7 +31,7 @@
   {{- if and (eq $index (add $size -1)) (gt $size 1) }}</div>{{ end }}
   {{- end }}
 </div>
-<a href = '{{ $.Site.BaseURL }}/noticias/' class = 'post_nav'><span class = 'post_next'>Noticias
+<a href = '{{ $.Site.BaseURL }}/categories/' class = 'post_nav'><span class = 'post_next'>Secciones y Categorías
   <svg class="icon icon_scale">
     <use xlink:href="#double-arrow"></use>
   </svg>
