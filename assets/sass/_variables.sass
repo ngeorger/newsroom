@@ -9,24 +9,24 @@ $never-icon-path: "../images/vampiro-404.jpg"
 html
   --color-mode: "dim"
   --light: #fff
-  --dark: rgb(18,20,24)
-  --gray: #f5f5f5
-  --bubble: rgb(16,16,18)
+  --dark: #000000
+  --gray: #999999
+  --bubble: #1d0037
   --accent: var(--gray)
-  --bg: var(--light)
-  --bg-dark: #000
-  --text: var(--dark)
+  --bg: var(--dark)
+  --bg-dark: #09000a
+  --text: var(--light)
   --font: 'Metropolis', sans-serif
-  --theme: rgba(205, 143, 255, 1) //rgb(52,199,89) // #04a763
+  --theme: #1d0037 //rgb(52,199,89) // #04a763
   --ease: cubic-bezier(.19,1,.22,1)
 
   @mixin darkmode
     --light: #eee
     --color-mode: 'dim'
-    --bg: var(--bg-dark)
-    --text: var(--light)
-    --accent: var(--bubble)
-    --theme: rgba(205, 143, 255, 1)//rgb(24,175,119)
+    --bg: #09000a
+    --text: #ffffff
+    --accent: #370067
+    --theme: #f5e2ff//rgb(24,175,119)
     *
       box-shadow: none !important
 
